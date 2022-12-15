@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: action/checkout@v3
+        uses: actions/checkout@v3
 
       - name: Setup Python
         uses: actions/setup-python@v3
@@ -22,7 +22,7 @@ jobs:
         run: pip install -r requirements.txt 
 
       - name: Create DB
-        run: DATABASE_URL=sqlite:///test.db create_db.py
+        run: DATABASE_URL=sqlite:///test.db python create_db.py
 
       - name: Run tests
         run: DATABASE_URL=sqlite:///test.db pytest
