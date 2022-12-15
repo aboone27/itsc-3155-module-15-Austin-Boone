@@ -23,3 +23,6 @@ jobs:
 
       -name: Create DB
        run: DATABASE_URL=sqlite:///test.db pytest
+
+      -name: Run tests
+       run: DATABASE_URL=sqlite:///test.db pytest
