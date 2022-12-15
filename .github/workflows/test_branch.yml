@@ -25,4 +25,4 @@ jobs:
         run: DATABASE_URL=sqlite:///test.db python create_db.py
 
       - name: Run tests
-        run: DATABASE_URL=sqlite:///test.db pytest
+        run: DATABASE_URL=sqlite:///test.db python pytest
